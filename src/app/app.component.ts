@@ -15,7 +15,7 @@ export class AppComponent {
       <script>
         fbq('track', 'Purchase', {
           value: 20,
-          currency: EGP
+          currency: 'EGP'
         });
       </script>`);
       document.querySelector('.facebook-pixel').appendChild(fragment);
