@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  value: number = 20;
+  currency: string = 'EGP' 
+
+  createCharge() {
+    const fragment = document.createRange().createContextualFragment(`
+      <script>
+        fbq('track', 'Purchase', {
+          value: ${this.value},
+          currency: ${this.currency}
+        });
+      </script>`);
+      document.querySelector('.facebook-pixel').appendChild(fragment);
+  }
 }
