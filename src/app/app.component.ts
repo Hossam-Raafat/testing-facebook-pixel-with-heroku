@@ -12,7 +12,7 @@ export class AppComponent {
     const fragment = document.createRange().createContextualFragment(`
       <script>
         fbq('track', 'Purchase', {
-          value: 20,
+          value: 10,
           currency: 'USD'
         });
       </script>`);
